@@ -24,13 +24,13 @@ namespace Final_Project___2022
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txtStdNum control.
+        /// txtAdminNum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStdNum;
+        protected global::System.Web.UI.WebControls.TextBox txtAdminNum;
 
         /// <summary>
         /// txtPassword control.

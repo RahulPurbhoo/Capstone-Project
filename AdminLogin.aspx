@@ -50,7 +50,7 @@
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style3">Username </td>
                     <td class="auto-style2">
-                        <asp:TextBox ID="txtStdNum" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtAdminNum" runat="server"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -81,7 +81,7 @@
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style2">
-                        <asp:Button ID="btnLogin" runat="server" Text="Login" Width="168px" />
+                        <asp:Button ID="btnLogin" runat="server" Text="Login" Width="168px" OnClick="btnLogin_Click" />
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
