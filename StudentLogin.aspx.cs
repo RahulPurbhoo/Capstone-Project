@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Security.Cryptography;
-using System.Data.SqlClient;
-using System.Threading;
 using System.Text;
 using System.Configuration;
 using MySql.Data.MySqlClient;
@@ -15,6 +8,9 @@ namespace Final_Project___2022
 {
     public partial class StudentLogin : System.Web.UI.Page
     {
+
+        Student myStudent = new Student();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -34,6 +30,8 @@ namespace Final_Project___2022
         protected void btnLogin_Click(object sender, EventArgs e)
         {
 
+            myStudent.StudentNum = txtStdNum.Text;
+
             string mainconn = ConfigurationManager.ConnectionStrings["Mysqlconnection"].ConnectionString;
             MySqlConnection con = new MySqlConnection(mainconn);
             string encryptedPassword = Encrypt(txtPassword.Text);
@@ -43,7 +41,7 @@ namespace Final_Project___2022
             String Query = "SELECT COUNT(1) FROM Login WHERE Username=@Student_ID AND Password=@Student_Password";
             MySqlCommand cmd = new MySqlCommand(Query, con);
             cmd.Parameters.AddWithValue("@Student_ID", txtStdNum.Text);
-            cmd.Parameters.AddWithValue("@Student_Password", txtPassword.Text);
+            cmd.Parameters.AddWithValue("@Student_Password", encryptedPassword);
             int count = Convert.ToInt32(cmd.ExecuteScalar());
             con.Close();
 
