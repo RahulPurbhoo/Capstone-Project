@@ -97,6 +97,17 @@
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
+                <td class="auto-style3">Password</td>
+                <td class="auto-style2">
+                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
                 <td class="auto-style3">&nbsp;</td>
                 <td class="auto-style2">&nbsp;</td>
                 <td>&nbsp;</td>
@@ -108,7 +119,7 @@
                 <td>&nbsp;</td>
                 <td class="auto-style3">&nbsp;</td>
                 <td class="auto-style2">
-                    <asp:Button ID="btnRegister" runat="server" Text="Register" Width="168px" />
+                    <asp:Button ID="btnRegister" runat="server" Text="Register" Width="168px" OnClick="btnRegister_Click" />
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
